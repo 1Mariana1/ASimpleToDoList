@@ -2,8 +2,29 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-      System.out.println("This is where you will put the driver program! It will run the source code that you write for the lab.");
-      System.out.println("Create separate files when writing your source code. Don't put all of your source code in this file!");
-      System.out.println("You can delete these println statements and replace them with your driver program.");
+
+        TaskList list = new TaskList();
+
+        list.add("Buy milk");
+        list.add("Buy eggs");
+        list.add("Prepare a lesson for CSC 122");
+        list.add("Sow beet seeds");
+
+        list.complete("Buy eggs");
+
+        System.out.println("\nAll Tasks:");
+        list.all();
+
+        System.out.println("\nCompleted Tasks:");
+        list.completed();
+
+        System.out.println("\nIncomplete Tasks:");
+        list.incomplete();
+
+        list.clear();
+
+        System.out.println("\nAfter Clear:");
+        list.all();
+
     }
 }
